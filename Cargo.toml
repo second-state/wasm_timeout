@@ -1,0 +1,23 @@
+[package]
+name = "wasm_timeout"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.17"
+
+wasmedge-sdk = { git = "https://github.com/second-state/WasmEdge.git", branch = "feat/async", features = [
+    "async",
+    "ffi",
+] }
+wasmedge-sys = { git = "https://github.com/second-state/WasmEdge.git", branch = "feat/async" ,features = [
+    "async",
+    "ffi",
+] }
+
+wasmedge-types = { git = "https://github.com/second-state/WasmEdge.git", branch = "feat/async" }
+
+wasmedge_sdk_async_wasi = { git = "https://github.com/second-state/wasmedge_sdk_async_wasi.git", branch = "try_timeout" }
+tokio = { version = "1", features = ["full"] }
