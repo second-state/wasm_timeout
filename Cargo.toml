@@ -20,4 +20,6 @@ wasmedge-sys = { git = "https://github.com/second-state/WasmEdge.git", branch = 
 wasmedge-types = { git = "https://github.com/second-state/WasmEdge.git", branch = "feat/async" }
 
 wasmedge_sdk_async_wasi = { git = "https://github.com/second-state/wasmedge_sdk_async_wasi.git", branch = "try_timeout" }
+
 tokio = { version = "1", features = ["full"] }
+env_logger = "0.10.0"
